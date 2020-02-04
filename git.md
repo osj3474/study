@@ -93,7 +93,21 @@ git commit
 
 
 
+4. git clone해서 해당 내용을 나의 저장소에서 계속 작업하고 싶은 경우
 
+   ```bash
+   나의 저장소 하나 말들어 놓고 시작
+   
+   git clone otherrepository_url
+   cd otherrepository
+   git remote -v
+   git remote remove origin
+   git remote add origin myrepository_url
+   git remote -v
+   git push -u origin master
+   ```
+
+   
 
 
 
