@@ -16,8 +16,9 @@
 
   ```bash
   node main.js  // 실행하고자 하는 파일이 main.js인 경우
-  ```
-
+  nodemon main.js. // 수정이 있으면 자동적으로 서버 재실행 해주는 툴
+```
+  
   
 
  
@@ -47,7 +48,15 @@ var str = `My name is ${name}`;
 
 <img width="784" alt="스크린샷 2020-02-01 오후 9 13 43" src="https://user-images.githubusercontent.com/42775225/73591903-c0e56b80-4537-11ea-912b-56abe008268e.png">
 
-### 
+
+
+
+
+
+
+
+
+
 
 ### 3. File System
 
@@ -107,6 +116,60 @@ app.createServer(function(req, res){
 })
 app.listen(3000)  // 3000포트 대기 중
 ```
+
+
+
+
+
+
+
+# passport
+
+passport-local : id, pw로 접속하는 방법
+
+passport-뭐시기 : facebook으로 접속하는 방법
+
+
+
+
+
+
+
+tar -xvf tar파일
+
+wget http://// ~~tar
+
+
+
+
+
+
+
+npm install => node_modules 가 생긴다. 외부모듈
+
+
+
+go build 했을 때, 패키지 못 찾는다고 하면,
+
+echo $GOPATH
+
+cd github.com/hyperledger/fabric 가서
+
+git branch 해보고
+
+git checkout tags/v1.4.4
+
+go get -u ""
+
+
+
+
+
+
+
+vim에서
+
+%s/찾을언어/바꿀언어
 
 
 
