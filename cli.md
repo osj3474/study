@@ -153,6 +153,15 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-15-165-142-48.ap-northeas
    scp -i ~/.ssh/osj-gcp-key screenshot.png 21500404@34.82.251.243:~/21500404
    ```
 
+3. 파일 다운로드
+
+   ```bash
+   scp -i ~/.ssh/my-ssh-key username@ip-address:remote-file-path local-file-path
+   
+   ex)
+   scp -i ~/.ssh/osj-gcp-key 21500404@34.82.251.243:~/hw1/21500404.tgz ~/Desktop
+   ```
+
    
 
 
