@@ -127,7 +127,7 @@ sudo chgrp staff .    // 현재 디렉토리의 그룹을 staff(그룹)로 바�
 1. 파일 전송
 
 ```bash
-scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-15-165-142-48.ap-northeast-2.compute.amazonaws.com:~/
+scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-00-00-000-000.ap-northeast-2.compute.amazonaws.com:~/
 ```
 
 
@@ -137,7 +137,7 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-15-165-142-48.ap-northeas
 1. 접속
 
    ```bash
-   ssh -i ~/.ssh/osj-gcp-key 21500404@34.82.251.243
+   ssh -i ~/.ssh/osj-gcp-key 21500404@00.00.000.000
    ```
 
    (물론, rsa key를 GCP에 등록해야 사용할 수 있을 것이다.)
@@ -150,7 +150,7 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-15-165-142-48.ap-northeas
    scp -i [인증키] [업로드할 파일] [계정]@[원격ip]:[업로드 디렉토리 경로]
    
    ex)
-   scp -i ~/.ssh/osj-gcp-key screenshot.png 21500404@34.82.251.243:~/21500404
+   scp -i ~/.ssh/osj-gcp-key screenshot.png 21500404@00.00.000.000:~/21500404
    ```
 
 3. 파일 다운로드
@@ -159,10 +159,42 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-15-165-142-48.ap-northeas
    scp -i ~/.ssh/my-ssh-key username@ip-address:remote-file-path local-file-path
    
    ex)
-   scp -i ~/.ssh/osj-gcp-key 21500404@34.82.251.243:~/hw1/21500404.tgz ~/Desktop
+   scp -i ~/.ssh/osj-gcp-key 21500404@00.00.000.000:~/hw1/21500404.tgz ~/Desktop
    ```
 
    
+
+
+
+
+
+# VIM
+
+명령모드 --> 입력모드 : i
+
+입력모드 --> 명령모드 : Esc
+
+1. 
+
+   ```bash
+   shift + a //
+   cw // 
+   shift + 4 //
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
