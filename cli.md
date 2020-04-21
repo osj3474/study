@@ -118,7 +118,17 @@ sudo chgrp staff .    // 현재 디렉토리의 그룹을 staff(그룹)로 바�
 
 
 
+# VM깔아서 세팅할 때 기본적!
 
+```bash
+cd ~
+vim .vimrc
+
+set background = dark
+set tabstop = 4
+set nu
+set ai
+```
 
 
 
