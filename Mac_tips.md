@@ -15,3 +15,11 @@
 3) 마우스로 데스크탑 보기 설정
 
 ![image](https://user-images.githubusercontent.com/42775225/80672226-11447900-8ae7-11ea-9f91-028a76a6f9f6.png)
+
+
+
+
+
+4) 강제종료
+
+![image](https://user-images.githubusercontent.com/42775225/81674204-c6801500-9487-11ea-9b07-e58b218a5b38.png)
