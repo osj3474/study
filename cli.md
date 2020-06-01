@@ -142,6 +142,44 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-00-00-000-000.ap-northeas
 
 
 
+2. 외부 사용자 연결해주기
+
+   ```bash
+   # 새로운 유저를 생성합니다.
+   - $ sudo useradd -s /bin/bash -m -d /home/USERNAME -g root USERNAME
+   
+   # 유저 비밀번호를 설정합니다.
+   - $ sudo passwd USERNAME
+   - 패스워드 입력
+   
+   # sudoers 파일 권한 변경
+   - $ sudo chmod u+w /etc/sudoers
+   
+   # sudoers 파일 열고, username 추가
+   - $ sudo vi /etc/sudoers 
+   - USERNAME ALL=(ALL:ALL) ALL
+   
+   # sshd_config 파일에 PasswordAuthentication 설정 추가(혹은 변경)
+   - $ sudo vi /etc/ssh/sshd_config
+   - PasswordAuthentication yes
+   
+   # ssh를 재시작합니다.
+   - $ sudo service ssh restart
+   
+   # ssh [username]@host
+   - $ ssh user@52.23.68.21 와 같은 형식으로 입력합니다.
+   
+   # 위에서 설정한 패스워드를 입력합니다.
+   
+   # 완료!
+   ```
+
+   
+
+
+
+
+
 # GCP
 
 1. 접속
