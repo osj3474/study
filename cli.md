@@ -176,7 +176,19 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-00-00-000-000.ap-northeas
 
    
 
+3. Scale up
 
+   : 급하게 scale up해야한다면, image만들고, elastip ip만 기존꺼 옮겨서 쓰면된다.
+
+   : 그런데 이렇게만 하면, 처음 만들 때의 IP와 elastic ip가 바뀌게 되고, 결국 접속을 시도했을 때, WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 라는 경고가 뜨게; 된다.
+
+   네트워크를 조금 더 공부하고 지금 해결한 방법이 왜 맞는지 이해할 수 있도록 하자.
+
+   ```shell
+   ssh-keygen -R 나의IP
+   ```
+
+   
 
 
 
