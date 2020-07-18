@@ -23,3 +23,14 @@
 4) 강제종료
 
 ![image](https://user-images.githubusercontent.com/42775225/81674204-c6801500-9487-11ea-9b07-e58b218a5b38.png)
+
+
+
+
+
+5) 이모티콘
+
+MacOS : `ctrl + cmd + space bar`
+
+Windows : `window key + semi colon || window key + . (period)`
+
