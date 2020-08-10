@@ -4,7 +4,7 @@ visual studio code를 사용하면서, 필요한 내용들을 정리하려 합�
 
 
 
-## 당황스러운 경우
+## ❌ 당황스러운 경우
 
 #### 1. 에디터 창이 하나로 보이는 경우
 
@@ -20,7 +20,7 @@ control + cmd + w 로 토글을 합니다.
 
 
 
-## 추천하는 Extension
+## ✅ 추천하는 Extension
 
 #### 1. prettier - code formatter
 
@@ -44,16 +44,43 @@ extension 검색 창에 prettier 를 입력해서 설치합니다. ![image](http
 
 
 
-## 저만의 커스터마이징
+## ✅ 저만의 커스터마이징
 
 #### 1. 단축키 지정
 
-**code --> preference --> keyboard shorcuts --> trans검색 --> 다음과 같이 지정**
+**code --> preference --> keyboard shorcuts**
 
-- **to uppercase : cmd + k**  
-- **to lowercase : cmd + l**
 
-**둘다 기존에 단축키가 다른 것으로 설정되어 있기는 하지만, 둘다 사용하지 않는 단축키라서 덮어씌웠습니다.**
+
+#### 1) 대소문자
+
+- To uppercase : cmd + k  
+- To lowercase : cmd + l
+
+둘다 기존에 단축키가 다른 것으로 설정되어 있기는 하지만, 둘다 사용하지 않는 단축키라서 덮어씌웠습니다.
+
+![image](https://user-images.githubusercontent.com/42775225/89746797-a3044f00-daf6-11ea-9966-e8405d6d09e4.png)
+
+
+
+#### 2) 창 이동
+
+아톰이나 다른 에디터에서는 바로 됐었던게 **cmd + 숫자** 로 에디터 이동하는 거였는데, 그게 vscode에서는 **control + 숫자** 로 설정되어 있습니다. 그래서 바꿔줍니다.
+
+- workbench.action.openEditorAtIndex : cmd + 숫자
+
+![image](https://user-images.githubusercontent.com/42775225/89746783-954ec980-daf6-11ea-94e6-85306136f274.png)
+
+
+
+에디터를 많이 켜놓게 되면, 왼쪽, 오른쪽으로도 이동하고 싶어서 다음도 수정하였습니다.
+
+- View: Open Next Editor : option + cmd + k
+- View: Open Previous Editor : option + cmd + j
+
+원래는 방향키인데, j, k로 하는게 더 편해서 바꾸었습니다.
+
+
 
 
 
@@ -81,4 +108,3 @@ extension 검색 창에 prettier 를 입력해서 설치합니다. ![image](http
 
    
 
-## 
