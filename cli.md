@@ -194,6 +194,55 @@ scp -i ~/Documents/dev/key/main.pem sch.png ubuntu@ec2-00-00-000-000.ap-northeas
 
 # GCP
 
+1. VM 인스턴스를 필요한 스펙에 맞게 만듭니다. 외부 IP 주소를 킵 해둡니다.
+
+2. 자신의 로컬에 키를 만듭니다. (추가로 입력하라고 하는 비밀번호는 추후 서버 접속 비밀번호가 됩니다.)
+
+   ```shell
+   ssh-keygen -t rsa -f ~/.ssh/[KEY_FILE_NAME] -C "GCP이메일" 
+   ```
+
+3. 키 정보를 확인하고, 복사 해둡니다.
+
+   ```shell
+   cat ~/.ssh/[KEY_FILE_NAME].pub
+   ```
+
+4. GCP console에서 VM 인스턴스의 메타 데이터 -> ssh키 로 이동합니다. 만들기 혹은 수정 탭을 눌러서 해당 키를 붙여넣습니다.
+
+5. 여기까지 하면, 일단 iterm(외부)에서 ssh 접속은 됩니다.
+
+6. 작업을 vim에서 하지 않고 싶다면, vscode를 킵니다.
+
+7. cmd + shift + p에서 'ssh'만 칩니다.
+
+   그 뒤에 Connect to Host -> Add New SSH Host
+
+   ```
+   ssh -i ~/.ssh/[KEY_FILE_NAME] id@외부ip
+   ```
+
+   /Users/osangjin/.ssh/config 가 보이면, Enter
+
+8. 키 파일의 권한을 수정해 줍니다.
+
+   ```shell
+   cd ~/.ssh
+   chmod 400 [KEY_FILE_NAME] [KEY_FILE_NAME].pub
+   ```
+
+9. cmd + shift + p 해서 'ssh'만 칩니다.
+
+   등록한 외부 ip가 보이면 비밀번호 입력해서 접속 끝
+
+
+
+
+
+
+
+cf) 
+
 1. 접속
 
    ```bash
