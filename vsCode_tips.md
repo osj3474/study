@@ -18,6 +18,26 @@ control + cmd + w 로 토글을 합니다.
 
 
 
+#### 2. 터미널에서 code . 이 안 먹히는 경우
+
+```shell
+vi .zshrc   # 맥 os 카탈리나 이후는 zshrc라고 합니당!
+```
+
+```shell
+code () {
+if [[ $# = 0 ]]
+then
+    open -a "Visual Studio Code"
+else
+    [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+    open -a "Visual Studio Code" --args "$F"
+fi
+}
+```
+
+
+
 
 
 ## ✅ 추천하는 Extension
