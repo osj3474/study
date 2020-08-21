@@ -66,7 +66,7 @@ extension 검색 창에 prettier 를 입력해서 설치합니다. ![image](http
 
 ## ✅ 저만의 커스터마이징
 
-#### 1. 단축키 지정
+### 1. 단축키 지정
 
 **code --> preference --> keyboard shorcuts**
 
@@ -102,9 +102,23 @@ extension 검색 창에 prettier 를 입력해서 설치합니다. ![image](http
 
 
 
+#### 3) 터미널
+
+- terminal: create new : cmd + t
 
 
-#### 2. html 자동 완성
+
+### 2. 폰트변경
+
+iterm에서 세팅했던대로 vscode에서 호환이 되어서 좋지만, oh my zsh 사용으로 vscode의 터미널이 깨지는 현상이 있을 수 있기 때문에 폰트를 변경합니다. (저는 iterm에서 D2Coding 사용 중)
+
+**code --> preference --> settings --> font**
+
+![image](https://user-images.githubusercontent.com/42775225/90868193-75aa8180-e3d1-11ea-8023-c30b700c3e4b.png)
+
+
+
+### 3. html 자동 완성
 
 1. html: 를 치고 엔터를 누르면, 바로 기본 세팅 완료.
 
