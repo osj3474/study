@@ -34,3 +34,14 @@ MacOS : `ctrl + cmd + space bar`
 
 Windows : `window key + semi colon || window key + . (period)`
 
+
+
+6) 한글 폴더명 분리되는 경우
+
+예시)
+
+![image](https://user-images.githubusercontent.com/42775225/91250763-c5ec5f80-e794-11ea-8a70-7a630ccf7e5d.png)
+
+해결법) iterm2 -> preferences -> profile -> text -> Unicode normalization form: NFC
+
+![image](https://user-images.githubusercontent.com/42775225/91250828-eb796900-e794-11ea-95f3-f63f32eea7a8.png)
