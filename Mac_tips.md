@@ -45,3 +45,13 @@ Windows : `window key + semi colon || window key + . (period)`
 해결법) iterm2 -> preferences -> profile -> text -> Unicode normalization form: NFC
 
 ![image](https://user-images.githubusercontent.com/42775225/91250828-eb796900-e794-11ea-95f3-f63f32eea7a8.png)
+
+
+
+
+
+7) 맨 위의 쓸데없는 아이콘 버리는 방법
+
+![image](https://user-images.githubusercontent.com/42775225/96942822-2ab40400-1511-11eb-97bf-1c46a7ac8782.png)
+
+cmd 누른 상태로, 아이콘 잡고 바탕화면에 드래그 앤 드롭하면 됩니다.
