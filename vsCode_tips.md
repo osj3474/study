@@ -141,3 +141,15 @@ iterm에서 세팅했던대로 vscode에서 호환이 되어서 좋지만, oh my
    ```
 
    
+
+
+
+
+
+## 터미널 default 바꾸기 (윈도우 기준)
+
+settings -> integrated terminal
+
+<img src="https://user-images.githubusercontent.com/42775225/104085430-ba588b80-5292-11eb-8fe3-dd61ff4c2d10.png" alt="image" style="zoom:67%;" />
+
+<img src="https://user-images.githubusercontent.com/42775225/104085449-d9571d80-5292-11eb-9dcc-add027775898.png" alt="image" style="zoom:70%;" />
