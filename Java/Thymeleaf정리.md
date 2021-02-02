@@ -47,10 +47,14 @@
 #### 2) Selection Variable Expressions: `*{...}`
 
 ```html
-
+<div th:object="${session.user}">
+    <p>Name: <span th:text="*{firstName}">Sebastian</span>.</p>
+    <p>Surname: <span th:text="*{lastName}">Pepper</span>.</p>
+    <p>Nationality: <span th:text="*{nationality}">Saturn</span>.</p>
+</div>
 ```
 
-객체의 속성 값을 나타낼 수 있습니다. 
+선택된 객체가 없다면, `${...}` 와 동일합니다. 위처럼 사용될 수 있습니다. (아래의 ***<u>각종 팁</u>*** 2번 참고)
 
 
 
@@ -91,8 +95,31 @@ html파일을 그냥 열면 `href` 가 적용되고, 서버에서는 `th:href` �
 
 #### 5) Fragment Expressions: `~{...}`
 
-```html
+##### **/WEB-INF/templates/footer.html**
 
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+ 
+    <div th:fragment="copy">
+      &copy; 2011 The Good Thymes Virtual Grocery
+    </div>
+  
+  </body>
+</html>
+```
+
+##### home.html
+
+```html
+<body>
+
+  ...
+
+  <div th:insert="~{footer :: copy}"></div>
+  
+</body>
 ```
 
 레이아웃을 짤 때, 중복되는 코드를 이것으로 막을 수 있습니다. 
@@ -103,9 +130,11 @@ html파일을 그냥 열면 `href` 가 적용되고, 서버에서는 `th:href` �
 
 <br>
 
-## if, for문
+## if, for, switch문
 
 #### 1) if문
+
+#####  (1)
 
 ```html
 <div th:if="${user.isAdmin()} == false"> ...
@@ -121,9 +150,23 @@ if문이 참이면 `div` 가 살아있고, 아니면 없어집니다.
 
 
 
-#### 
+#####  (2)
 
+```html
+<tr th:class="${row.even}? 'even' : 'odd'">
+  ...
+</tr>
+```
 
+`condition` ? `true일때` : `false일때`  형태로도 사용할 수 있습니다.
+
+```html
+<tr th:class="${row.even}? 'alt'">
+  ...
+</tr>
+```
+
+참인 경우만 설정할 수도 있습니다.
 
 
 
@@ -131,9 +174,42 @@ if문이 참이면 `div` 가 살아있고, 아니면 없어집니다.
 
 <br>
 
-#### 2) 
+#### 2) for문
+
+우선 자바에서 `allProducts` 라는 리스트를 `prods` 에 담았다고 했을 때,
+
+```java
+List<Product> allProducts = productService.findAll();
+
+WebContext ctx = new WebContext(request, response, servletContext, request.getLocale());
+ctx.setVariable("prods", allProducts);
+```
+
+아래처럼 `th:each` 를 사용해서 for문을 사용할 수 있습니다.
+
+```html
+<tr th:each="prod : ${prods}">
+    <td th:text="${prod.name}">Onions</td>
+    <td th:text="${prod.price}">2.41</td>
+    <td th:text="${prod.inStock}? #{true} : #{false}">yes</td>
+</tr>
+```
 
 
+
+
+
+#### 3) switch문
+
+```html
+<div th:switch="${user.role}">
+  <p th:case="'admin'">User is an administrator</p>
+  <p th:case="#{roles.manager}">User is a manager</p>
+  <p th:case="*">User is some other thing</p>
+</div>
+```
+
+`th:switch`와 `th:case` 를 이용해서 사용할 수 있고, `*` 으로 default 값도 설정해줄 수 있습니다.
 
 
 
@@ -196,4 +272,74 @@ if문이 참이면 `div` 가 살아있고, 아니면 없어집니다.
    <p>Nationality: <span th:text="${session.user.nationality}">Saturn</span>.</p>
 </div>
 ```
+
+
+
+
+
+#### 3) th:attr은 권장되지 않습니다.
+
+```t
+Thymeleaf는 귀하의 의견에 동의하므로 th : attr이 템플릿에서 거의 사용되지 않습니다. 일반적으로 특정 태그 속성을 설정하는 작업이있는 다른 th : * 속성을 사용합니다 (th : attr과 같은 속성뿐 아니라).
+```
+
+th:attr을 통해서 value나 action값을 설정하지 말고, 직접 해당 속성을 설정하는 것을 권장합니다.
+
+1. `th:value`
+
+2. `th:action`
+
+3. `th:href`
+
+4. `th:classappend` (class추가)
+
+5. `th:checked`
+
+   
+
+
+
+#### 4) 샘플 데이터 넣기
+
+```html
+<table>
+   <tr th:each="x : ${xs}">
+     ...
+   </tr>
+   <!--/*-->
+   <tr>
+     ...
+   </tr>
+   <tr>
+     ...
+   </tr>
+   <!--*/-->
+</table>
+```
+
+<!--/*--> 안에 샘플 데이터를 넣으면 됩니다. 실제 서버를 돌릴 때는, 주석 처리 됩니다.
+
+
+
+
+
+#### 5) th:block으로 태그 없이 서버의 데이터를 사용하기
+
+```html
+<table>
+  <th:block th:each="user : ${users}">
+    <tr>
+        <td th:text="${user.login}">...</td>
+        <td th:text="${user.name}">...</td>
+    </tr>
+    <tr>
+        <td colspan="2" th:text="${user.address}">...</td>
+    </tr>
+  </th:block>
+</table>
+```
+
+`th:block` 부분은 실제 서버를 돌릴 때는 없어집니다.
+
+
 
