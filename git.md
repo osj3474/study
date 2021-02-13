@@ -159,3 +159,11 @@ git log
 git reset [돌아가고 싶은 commit코드] --hard
 ```
 
+
+
+#### 4. 특정 브랜치 클론
+
+```shell
+git clone -b sangjin --single-branch https://github.com/BAECHOOs/Spring-toyproject.git
+```
+
