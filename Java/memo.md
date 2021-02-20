@@ -64,3 +64,18 @@
   ```
 
   ![image](https://user-images.githubusercontent.com/42775225/107880628-65f49b80-6f23-11eb-9bae-420dcec6c206.png)
+
+
+
+
+
+# HttpServletRequest
+
+getParameter()
+
+
+
+
+
+# Model
+
