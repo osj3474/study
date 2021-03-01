@@ -69,6 +69,12 @@
 
 
 
+# Gradle Refresh
+
+view => Tool windwo => Gradle => 프로젝트 우클릭 => Refresh
+
+
+
 # HttpServletRequest
 
 getParameter()
@@ -78,4 +84,8 @@ getParameter()
 
 
 # Model
+
+
+
+
 
