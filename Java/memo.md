@@ -75,6 +75,14 @@ view => Tool windwo => Gradle => 프로젝트 우클릭 => Refresh
 
 
 
+# 로그 보기
+
+logging.level.org.springframework.security=DEBUG
+
+
+
+
+
 # HttpServletRequest
 
 getParameter()
