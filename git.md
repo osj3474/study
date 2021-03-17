@@ -167,3 +167,13 @@ git reset [돌아가고 싶은 commit코드] --hard
 git clone -b sangjin --single-branch https://github.com/BAECHOOs/Spring-toyproject.git
 ```
 
+
+
+
+
+#### 5. git 작성자 변경
+
+```
+git commit --amend --author="작성자명 <email주소>"
+```
+
