@@ -177,3 +177,13 @@ git clone -b sangjin --single-branch https://github.com/BAECHOOs/Spring-toyproje
 git commit --amend --author="작성자명 <email주소>"
 ```
 
+
+
+#### 6. git폴더에 화살표 방향
+
+```
+git rm --cached . -rf
+```
+
+를 하고, 다시 git add / commit / push를 합시다.
+
