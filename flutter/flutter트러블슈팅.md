@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 2. 개발자를 확인할 수 없기 때문에 'iproxy' 를 열 수 없습니다.
 
 ```
@@ -39,3 +35,21 @@ sudo xattr -d com.apple.quarantine /Users/sangjin/Documents/development/flutter/
    ```
 
    
+
+5. CFBundleVersion & CFBundleShortVersionString
+   - CFBundleVersion : 
+   - CFBundleShortVersionString : 
+
+
+
+
+
+# 개념
+
+1. Future<타입>
+
+   : 반환은 <타입> 이런 타입이 나올거야.
+
+2. 타입?
+
+   : int? 혹은 String? 같이 타입 뒤에 ?가 붙은 것은 null을 받을 수 있게 하겠다는 것이다.
