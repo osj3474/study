@@ -187,3 +187,22 @@ git rm --cached . -rf
 
 를 하고, 다시 git add / commit / push를 합시다.
 
+
+
+
+
+### cf) 알아두면 좋은 명령어
+
+#### 1) add 취소
+
+```
+git rm --cached *
+```
+
+#### 2) commit 취소
+
+```
+git reset HEAD^
+```
+
+(바로 직전 commit을 취소하는 경우입니다.)
