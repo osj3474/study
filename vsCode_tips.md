@@ -54,6 +54,20 @@ extension 검색 창에 prettier 를 입력해서 설치합니다. ![image](http
 
 
 
+그리고~!!!! 그래도 안되는 경우가 있다 ㅠㅜ
+
+settings => default formatter를 prettier로 변경하자. (아마 None일 것이다.)
+
+![image](https://user-images.githubusercontent.com/42775225/119677153-6fbe6100-be79-11eb-9c0d-036a523effe9.png)
+
+
+
+
+
+
+
+
+
 #### **2. material theme : mattia astorino**
 
 **이건 그냥 설치만 하면 됩니다.**
