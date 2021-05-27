@@ -206,3 +206,14 @@ git reset HEAD^
 ```
 
 (바로 직전 commit을 취소하는 경우입니다.)
+
+
+
+#### 3) 추적 중지
+
+```
+git update-index --assume-unchanged [파일]
+
+$ git update-index --no-assume-unchanged [파일]
+```
+
