@@ -84,7 +84,7 @@ settings => default formatter를 prettier로 변경하자. (아마 None일 것�
 
 **code --> preference --> keyboard shorcuts**
 
-
+![image-20210526233238912](/Users/sangjin/Library/Application Support/typora-user-images/image-20210526233238912.png)
 
 #### 1) 대소문자
 
