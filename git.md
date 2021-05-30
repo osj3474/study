@@ -217,3 +217,13 @@ git update-index --assume-unchanged [파일]
 $ git update-index --no-assume-unchanged [파일]
 ```
 
+
+
+#### 4) 임시 저장
+
+```
+git stash  // working directory 깨끗하게
+
+git stash apply // 복구
+```
+
