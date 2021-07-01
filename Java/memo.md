@@ -101,3 +101,9 @@ getParameter()
 
 https://daddyprogrammer.org/post/636/springboot2-springsecurity-authentication-authorization/
 
+=> DispatcherServlet이 원래 Controller랑 view랑 해서 처리해주는데, 그 앞단에 filter를 두고 클라이언트의 request를 가로챔. 
+
+=> jwt : JSON객체인데, 여기 안에 A사용자인지, B사용자인지에 대한 정보랑 resource에 대한 권한에 대한 정보가 들어가져있음. 이걸 encryption해서 string 값으로 된 것.
+
+- claim으로 부가적인 정보들을 덧붙일 수 있음.
+- 
