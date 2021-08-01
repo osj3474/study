@@ -106,4 +106,94 @@ https://daddyprogrammer.org/post/636/springboot2-springsecurity-authentication-a
 => jwt : JSON객체인데, 여기 안에 A사용자인지, B사용자인지에 대한 정보랑 resource에 대한 권한에 대한 정보가 들어가져있음. 이걸 encryption해서 string 값으로 된 것.
 
 - claim으로 부가적인 정보들을 덧붙일 수 있음.
-- 
+
+
+
+
+
+# message properties
+
+
+
+1. build.gradle
+
+   ```
+   
+   ```
+
+2. application.properties
+
+   ```
+   spring.messages/messages*.properties
+   spring.message.encoding=UTF-8
+   ```
+
+3. resource/messages/message.properties
+
+   ```
+   NOT_EXIST_DEVGROUP=존재하지 않는 개발자 모임입니다.
+   FAIL_CREATE_DEVGROUP=해당 조건으로 개발자 모임을 생성할 수 없습니다.
+   ```
+
+4. MessageSource 주입받아서 getMessage(key, argu, Locale)로 쓰면 된다.
+
+5. 
+
+
+
+
+
+네, 확인하였고, DevGroupController, AdminDevGroupController 모두 final 추가하였습니다.
+
+
+
+네, 이 또한, DevGroupController, AdminDevGroupController에 모두 적용하였습니다.
+
+
+
+@Data > @Getter로 수정하였습니다.
+
+
+
+ControllerAdvice는 사용하되, Error객체를 반환하는 대신, 에러 메세지를 message properties에 정의하여 다음과 같이 String을 반환하도록 하였습니다.
+
+
+
+![image-20210726142334928](/Users/sangjin/Library/Application Support/typora-user-images/image-20210726142334928.png)
+
+
+
+
+
+
+
+![image-20210726142357106](/Users/sangjin/Library/Application Support/typora-user-images/image-20210726142357106.png)
+
+
+
+
+
+
+
+주석도 달아보았습니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
