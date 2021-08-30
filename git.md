@@ -233,33 +233,4 @@ git stash apply // 복구
 
 1. 푸시 전인 경우
 
-   ```
-   git commit --amend -m "수정할 메세지"
-   ```
-
-   ![image](https://user-images.githubusercontent.com/42775225/131343215-7762e7af-53e4-4377-8aeb-ca0b1c57e3fc.png)
-
-
-   ![image](https://user-images.githubusercontent.com/42775225/131343178-8c582598-a26e-4f89-91db-227e7697475b.png)
-
-
-
-
-
-2. 푸시를 해버린 경우
-
-   ```
-   git revert "취소 원하는 해시값"
-   git push
-   ```
-
-   push를 먼저 취소를 하고 다시
-
-   ```
-   git add .
-   git commit -m '커밋 메세지 다시 적기'
-   ```
-
-   
-
    
