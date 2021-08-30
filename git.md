@@ -227,3 +227,6 @@ git stash  // working directory 깨끗하게
 git stash apply // 복구
 ```
 
+
+
+#### 5) 커밋 로그를 어떻게 고칠까
