@@ -217,6 +217,8 @@ git update-index --assume-unchanged [파일]
 $ git update-index --no-assume-unchanged [파일]
 ```
 
+디렉토리 추적이 안되면 파일명 끝에 '/' 를 붙이면 된다.
+
 
 
 #### 4) 임시 저장
