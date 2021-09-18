@@ -268,3 +268,10 @@ git stash apply // 복구
    
 
    
+
+### 하위 브랜치
+
+```shell
+git checkout -b feature/dev-event-crud
+```
+
