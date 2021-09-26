@@ -30,7 +30,20 @@
 
 
 이제는 백엔드 엔지니어라면 인프라도 놓치지 말자
-> 대규모 시스템 설계 기초 
+> 대규모 시스템 설계 기초
+> effective java
+> kotlin in action
+> modern java in action
+> 토비의 스프링
+> ddd start
+> clean code
+> 객체지향의 사실과 오해
+> netty in action
+> micro service pattern
+> 모던 리눅스 관리
+> Redis 운영 관리
+> 쿠버네티스 입문
+> 쿠버네티스 인 액션 
 책읽기
 
 
