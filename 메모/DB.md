@@ -84,4 +84,38 @@ create(인덱스 테이블에도 insert필요), update(기존 row 사용하지 �
 
   - A —> B 로의 dependency가 있다면, A는 super key 중에 하나여야 한다.
   - non PK가 PK를 식별하면 안된다.
-  - 
+
+
+
+
+
+
+
+### < 격리수준 >
+
+![image](https://user-images.githubusercontent.com/42775225/136661320-d0b739f0-c9aa-48dd-85c3-b8c125761092.png)
+
+- phantom read : 순차적으로 같은 것을 select 하는데, 다른 값이 읽히는 경우 (단, 중간에 insert가 있어서)
+- nonrepeatable read : 순차적으로 같은 것을 select하는데, 다른 값이 읽히는 경우 (단, 중간에 update, deleterk 있어서)
+- dirty read : 아직 commit 전인데 update하고 있는 데이터 들고가서 작업해서 데이터 정합성깨지는 것.
+
+serializable말고는 read는 다 가능. 다만 감당할 수 있는 에러 수준에 따라 정책 설정하면 됨.
+
+1. serializable : 지금 작업하는 테이블에 대해서 다른 트랜잭션 read도 개입 불가
+2. repeatable read : 가장 마지막에 commit된 상태를 읽되, 내가 한번 읽은 row는 다른 곳에서의 commit유무와 관계없이 처음 읽었던 그 값으로 읽는다.
+3. read commmited : 가장 마지막에 commit된 상태의 값을 가지고 온다. 다른 곳에서 commit했으면 commit된 값으로 읽는다.
+4. read uncommitted : commit전에 수정 상태라도 그 상태의 값을 가지고 온다. (commit돼서 인증된 값 아니라도) 사실상 트랜잭션 개입 모두 허용.
+
+
+
+cf) 조회수 카운팅 로직에서의 트랜잭션 격리수준
+
+조회수 기능이 가지는 지위에 따라 다르게 결정하자.
+
+- 실시간 검색어 등 조회수 기능이 가지는 영향이 큰 경우 ⇒ serializable, repeatable read, read committed
+  - serializable : 데이터 정합성은 걱정 없지만, 응답속도가 늦은 tradoff
+  - repeatable read : rollback 의 경우가 잦은 경우 비교적 데이터 정합성이 높다는 장점
+  - read committed : rollback이 없다는 가정하에 상대적으로 데이터 정합성도 지키고, 응답시간도 지킬 수 있다.
+- 약간의 오차가 허용 가능한 경우 ⇒ 더 낮은 레벨(repeatable read, read committed 등)
+  - read committed : commit된 상태의 값을 읽다보니 동시 조회 시 조회수 상승 누락이 발생 가능함
+  - read uncommitted : commit되지 않더라도 최신 수정된 값으로 읽기 때문에 rollback 가능성 낮다면, 최선의 선택. (사실 조회수 관련해서 rollback 이 일어날 가능성이 없기 때문에 이게 낫다.)
