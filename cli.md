@@ -312,6 +312,46 @@ cf)
 
 
 
+# NCP
+
+1. **ACG생성**
+
+   - 설정
+
+   ![image](https://user-images.githubusercontent.com/42775225/146666892-a6b7965c-fd9c-482e-8b07-5b72d3cc6a55.png)
+
+   
+
+2. **Server 생성**
+
+   - 포트 포워딩 설정
+
+   ![image](https://user-images.githubusercontent.com/42775225/146666805-357c54ed-64f7-4ab7-acae-40ea7ad69d4d.png)
+
+   ![image](https://user-images.githubusercontent.com/42775225/146666844-42cf445e-4ad3-4fbd-88f2-169ccb47ddde.png)
+
+   - 비밀번호 획득
+
+     ![image](https://user-images.githubusercontent.com/42775225/146666911-04532266-b873-4c63-87b0-3ed095fe26f2.png)
+
+     여기서 Server생성 시에 만든 pem 파일 넣으면, 비밀번호를 말해줌.
+
+   
+
+3. **Public IP생성**
+
+4. **ssh 접속**
+
+   ```shell
+   ssh -p 2222 root@[ip]
+   ```
+
+   ![image-20211219161057835](/Users/sangjin/Library/Application Support/typora-user-images/image-20211219161057835.png)
+
+
+
+
+
 # VIM
 
 명령모드 --> 입력모드 : i
