@@ -340,6 +340,8 @@ cf)
 
 3. **Public IP생성**
 
+   : 이때의 ip는 ssh 말고, mysql 직접 통신 이런거를 위함.
+
 4. **ssh 접속**
 
    ```shell
