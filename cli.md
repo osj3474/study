@@ -348,7 +348,7 @@ cf)
    ssh -p 2222 root@[ip]
    ```
 
-   ![image-20211219161057835](/Users/sangjin/Library/Application Support/typora-user-images/image-20211219161057835.png)
+   ![image](https://user-images.githubusercontent.com/42775225/146850938-388c142d-698f-417d-a75b-d347f53a1665.png)
 
 
 
