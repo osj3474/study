@@ -400,11 +400,21 @@ docker exec -it [컨테이너 ID] /bin/bash
    sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
    ```
 
-   
 
 
+<br />
 
+# 서버가 응답을 못하는 경우
 
+방화벽 port도 열었고,
+
+listen 하고 있다는 것도 확인했음에도
+
+응답을 못하는 경우에는
+
+```
+sudo iptables -I INPUT 5 -i ens3 -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
+```
 
 
 
