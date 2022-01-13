@@ -420,6 +420,16 @@ sudo iptables -I INPUT 5 -i ens3 -p tcp --dport 3306 -m state --state NEW,ESTABL
 
 
 
+<br />
+
+# 무료 도메인 등록
+
+==> https://xn--220b31d95hq8o.xn--3e0b707e/
+
+
+
+
+
 
 
 
