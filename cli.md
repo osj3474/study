@@ -386,6 +386,22 @@ docker exec -it [컨테이너 ID] /bin/bash
 
 
 
+# 우분투 시간변경
+
+1. Seoul 파일 있는지 확인 
+
+   ```
+   ls /usr/share/zoneinfo/Asia
+   ```
+
+2. 시간 변경
+
+   ```
+   sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+   ```
+
+   
+
 
 
 
