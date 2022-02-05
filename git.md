@@ -269,7 +269,20 @@ git stash apply // 복구
 
    
 
-   
+
+
+
+***흔적도 남기지 않게 하는 법***
+
+```shell
+git log
+git reset --hard [해당commit]
+git push -f origin [해당 branch]
+```
+
+
+
+
 
 ### 하위 브랜치
 
