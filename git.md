@@ -290,3 +290,17 @@ git push -f origin [해당 branch]
 git checkout -b feature/dev-event-crud
 ```
 
+
+
+
+
+### 하위 모듈
+
+public repo 안에 private repo 두는 법~!
+
+! git clone 대신에 !
+
+```shell
+git submodule add [repo주소]
+```
+
