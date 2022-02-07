@@ -298,9 +298,15 @@ git checkout -b feature/dev-event-crud
 
 public repo 안에 private repo 두는 법~!
 
-! git clone 대신에 !
+public repo에서 원하는 위치로 가서!
 
 ```shell
 git submodule add [repo주소]
+```
+
+그리고 public repo를 새롭게 clone 받을 때, 내부의 submodule까지 함께 받으려면!
+
+```shell
+git clone --recurse-submodules [repo주소]
 ```
 
