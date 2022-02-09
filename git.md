@@ -310,3 +310,9 @@ git submodule add [repo주소]
 git clone --recurse-submodules [repo주소]
 ```
 
+그리고 submodule 업데이트는
+
+```shell
+git submodule update --remote
+```
+
