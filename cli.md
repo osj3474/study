@@ -430,7 +430,21 @@ sudo iptables -I INPUT 5 -i ens3 -p tcp --dport 3306 -m state --state NEW,ESTABL
 
 
 
+# 도커
 
+1. 컨테이너 전부 삭제
+
+   ```shell
+   docker container rm -f $(docker container ls -aq)
+   ```
+
+2. 이미지 전부 삭제
+
+   ```shell
+   docker image rm -f $(docker image ls -q)
+   ```
+
+   
 
 
 
