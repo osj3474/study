@@ -84,3 +84,13 @@ cmd 누른 상태로, 아이콘 잡고 바탕화면에 드래그 앤 드롭하�
 ```
 
 해서 192로 시작하는 부분 확인
+
+
+
+## 10) homebrew 에서 다운받은 sdk intellij에서 잡기
+
+심볼릭 링크를 만들자
+
+```
+sudo ln -s /opt/homebrew/opt/openjdk@17 /Library/Java/JavaVirtualMachines
+```
